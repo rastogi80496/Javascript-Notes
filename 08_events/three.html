@@ -13,7 +13,89 @@
     <button id="start">Start</button>
 </body>
 <script>
+    const sayDate = function (str) {
+        console.log(str, Date.now());
+    }
 
+    const intervalId = setInterval(sayDate, 1000, "hi")
+
+    clearInterval(intervalId)
 </script>
 
 </html>
+
+
+
+
+
+// ===================== setTimeout =====================
+// setTimeout(fn, delay)
+// -> Runs a function ONCE after given time (in ms)
+
+// Example:
+// const changeMe = setTimeout(changeText, 2000);
+
+// To stop it before execution:
+// clearTimeout(changeMe)
+
+// Use case:
+// -> Delay execution (e.g., change UI after 2 sec)
+
+
+// ===================== clearTimeout =====================
+// clearTimeout(timeoutId)
+// -> Cancels the scheduled setTimeout
+
+// Example:
+// button click stops text change before it happens
+
+
+// ===================== setInterval =====================
+// setInterval(fn, delay, arg1, arg2...)
+// -> Runs function REPEATEDLY after every delay
+
+// Example:
+// const intervalId = setInterval(sayDate, 1000, "hi")
+
+// Output:
+// hi 1710000000000 (every 1 sec)
+
+
+// ===================== clearInterval =====================
+// clearInterval(intervalId)
+// -> Stops the repeating interval
+
+// Important:
+// -> If called immediately, interval WON’T run even once
+
+
+// ===================== Key Difference =====================
+// setTimeout -> runs ONCE
+// setInterval -> runs AGAIN & AGAIN
+
+
+// ===================== Event Listener =====================
+// element.addEventListener('click', function(){...})
+// -> Executes function on user action
+
+// Example:
+// Stop button -> stops timeout
+
+
+// ===================== DOM Manipulation =====================
+// document.querySelector('h1').innerHTML = "Best Js series"
+// -> Changes HTML content dynamically
+
+
+// ===================== Flow Summary =====================
+// 1. setTimeout → schedule task
+// 2. User clicks "Stop"
+// 3. clearTimeout → cancels task
+
+// 1. setInterval → repeat task
+// 2. clearInterval → stops repetition
+
+
+// ===================== Tip =====================
+// Always store timer in a variable
+// (needed to stop it later)
