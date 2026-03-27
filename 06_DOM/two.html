@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent);                         // <div class="parent">...</div>
+    // console.log(parent.children); // HTMLCollection [div.day, div.day, div.day, div.day] 
+    // console.log(parent.children[1]); // Tuesday
+    // console.log(parent.children[1].innerHTML); // Tuesday
+
+
+    // for(let i=0; i<parent.children.length; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    parent.children[1].style.color = 'orange';
+    console.log(parent.firstElementChild); // Monday
+    console.log(parent.lastElementChild); // Thursday
+
+    //child to parent
+    const day = document.querySelector('.day'); // Monday
+    console.log(day.parentElement); // .parent
+    console.log(day.nextElementSibling); // Tuesday
+
+
+    //NodeList
+    console.log("Nodes: " ,parent.childNodes); // NodeList (includes text nodes like whitespace) // [text, div.day, text, div.day, text, div.day, text, div.day, text] 
+
+
+</script>
+</html>
+
+
+
+
+
+// ===== DOM BASICS =====
+
+// Select parent element
+// const parent = document.querySelector('.parent');
+
+// children → HTMLCollection (only element nodes)
+// parent.children                 // [div.day, div.day, ...]
+// parent.children[1]              // Tuesday
+// parent.children[1].innerHTML    // "Tuesday"
+
+// Loop through children
+// for (let i = 0; i < parent.children.length; i++) {
+//     console.log(parent.children[i].innerHTML);
+// }
+
+
+// Modify style
+// parent.children[1].style.color = 'orange';
+
+
+// ===== ELEMENT NAVIGATION =====
+
+// First & Last child (elements only)
+// parent.firstElementChild   // Monday
+// parent.lastElementChild    // Thursday
+
+
+// Child → Parent
+// const day = document.querySelector('.day');
+// day.parentElement          // .parent
+
+// Sibling navigation
+// day.nextElementSibling     // Tuesday
+
+
+// ===== NODE vs ELEMENT =====
+
+// childNodes → NodeList (includes text, comments, whitespace)
+// parent.childNodes          // includes text nodes (\n, spaces)
+
+// children → HTMLCollection (only elements)
+// parent.children            // only element nodes (div.day, div.day, ...)
+
+
+// ===== IMPORTANT DIFFERENCE =====
+
+// HTMLCollection
+// - Live collection
+// - Only element nodes
+
+// NodeList
+// - Can include text/comment nodes
+// - Can be live or static (querySelectorAll = static)
+
+
+// ===== QUICK SUMMARY =====
+
+// querySelector → selects first match
+// children → only elements
+// childNodes → everything (text + comment + elements)
+// parentElement → go up
+// nextElementSibling → go sideways
+// style → modify CSS via JS

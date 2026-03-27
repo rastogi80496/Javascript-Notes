@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+
+    <style>
+        .bg-black{
+            background-color: #000000;
+            color: #fff
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">Dom learning on chai aur code. < span style="display: none">Its Not bad</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit set</p>
+        <input type="password" name="pass" id="pass" placeholder="Enter your password">
+
+        <ul>
+            <li class = "list-item">One</li>
+            <li class = "list-item">One</li>
+            <li class = "list-item">Two</li>
+            <li class = "list-item">Three</li>
+            <li class = "list-item">Four</li>
+        </ul>
+        
+    </div>
+</body>
+</html>
+
+
+
+/* ===================== 🌐 DOM CHEAT SHEET ===================== */
+
+/* 🔹 1. Selecting Elements */
+
+// Single element (returns first match)
+document.querySelector('h1')
+document.querySelector('#title') // By ID 
+document.querySelector('.heading') // By class
+
+// Multiple elements (returns NodeList)
+document.querySelectorAll('li')
+
+// By class name (returns HTMLCollection)
+document.getElementsByClassName('list-item')
+
+
+/* 🔹 2. NodeList vs HTMLCollection */
+
+// NodeList:
+// - Returned by querySelectorAll
+// - Supports forEach()
+
+// HTMLCollection:
+// - Returned by getElementsByClassName
+// - Does NOT support forEach()
+
+// Convert HTMLCollection → Array
+Array.from(tempClassList)         //tempClassList is HTMLCollection
+
+
+/* 🔹 3. Looping Elements */
+
+// ❌ Wrong (HTMLCollection)
+tempClassList.forEach(li => console.log(li)) // ERROR
+
+// ✅ Correct
+Array.from(tempClassList).forEach(li => {
+console.log(li)
+})
+
+// ✅ NodeList (works directly)
+document.querySelectorAll('li').forEach(li => {
+li.style.backgroundColor = 'red'
+})
+
+
+/* 🔹 4. Accessing Elements */
+
+// Access single element using index
+tempLiList[0]
+
+// ❌ Wrong (collection has no style)
+tempLiList.style.color = 'green'
+
+// ✅ Correct
+tempLiList[0].style.color = 'green'
+
+
+/* 🔹 5. Changing Styles */
+
+element.style.color = 'green'
+element.style.backgroundColor = 'black'
+element.style.padding = '25px'
+
+
+/* 🔹 6. Text Properties */
+
+// innerText → only visible text
+title.innerText
+
+// textContent → includes hidden text
+title.textContent
+
+// innerHTML → includes HTML tags
+title.innerHTML
+
+
+/* 🔹 7. Parent → Child Selection */
+
+const parent = document.querySelector('ul')
+const child = parent.querySelector('li')
+
+
+/* 🔹 8. Changing Text */
+
+child.innerText = "Five"
+
+
+/* 🔹 9. Input Selection */
+
+document.querySelector('input[type="password"]')
+// returns element OR null
+
+
+/* 🔹 10. Common Errors */
+
+// ❌ forEach not a function
+// Reason: HTMLCollection
+
+// ❌ Cannot set properties of undefined
+// Reason: using collection instead of element
+
+// ❌ variable not defined
+// Reason: typo
+
+
+/* ===================== 🔥 SUMMARY ===================== */
+
+// querySelector → single element
+// querySelectorAll → NodeList (loop possible)
+// getElementsByClassName → HTMLCollection (convert needed)
+// Use index [0] for accessing elements
+// Use .style to change CSS
+// Know innerText vs textContent vs innerHTML
+
+/* ===================================================== */
