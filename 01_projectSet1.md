@@ -223,7 +223,7 @@ const randomColor = function () {
     color += hex[Math.floor(Math.random() * 16)];
   }
   return color;
-};f
+};
 
 let intervalId;
 const startChangingColor = function () {
