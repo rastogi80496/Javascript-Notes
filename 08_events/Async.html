@@ -1,0 +1,27 @@
+<!--
+1. JS single-threaded + synchronous hai → ek time pe ek kaam, line by line
+2. Async ka kaam browser/Node APIs handle karte hain (like setTimeout)
+3. JS Engine = Call Stack + Heap
+
+🔄 Flow:
+Code call stack me run hota hai
+Async function (e.g. setTimeout) → Web API ko de diya jata hai
+Kaam complete hone ke baad → Task Queue me aata hai
+Event Loop check karta hai → agar stack empty hai
+Tab queue se callback uthake call stack me daal deta hai
+
+👉 One-liner:
+JS khud sync hai, async ka magic Web APIs + Task Queue + Event Loop se hota hai. -->
+
+
+
+
+// ===================== Async JS =====================
+- setTimeout, setInterval
+-fetch (API calls)
+-Promises (then, catch)
+-async/await
+-Event listeners (click, etc.)
+- File/DB operations (Node.js)
+
+👉 Rule: Jo kaam delay ho ya external ho → async 👍
