@@ -100,7 +100,7 @@ submit.addEventListener('click' ,() => {
 
         `;
 
-        showScore.classList.remove('scoreArea');
+        showScore.classList.remove('scoreArea'); 
     }
 });
 

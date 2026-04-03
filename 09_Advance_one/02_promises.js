@@ -1,3 +1,5 @@
+//promises is an object that represent the eventual completion of asynchronous operation.(Contaier with some value that will be available in the future)
+
 const promiseOne = new Promise(function(resolve, reject) {
     //Do async task
     //DB calls, Crypto, network calls
@@ -31,7 +33,7 @@ new Promise(function(resolve, reject){
 
 
 //3.Promise with data 
-const promiseThree= new Promise(function(resolve, rejecct){
+const promiseThree= new Promise(function(resolve, reject){
     setTimeout(function(){
         resolve({username:'aditya', email: 'aditya@example.com'});;
     }, 1000);
