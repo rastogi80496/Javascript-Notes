@@ -20,12 +20,10 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //myNums.filter(() => {}) -> return key words use kro when scope{} is used
 
 const newNums = myNums.filter( (num) => {
-    return num > 4
+    return num > 4;
 } )
 
-// console.log(myNums);
-
-
+console.log(newNums); // [5, 6, 7, 8, 9, 10]
 
 //BY for each loop
 // const newNums = []
@@ -56,4 +54,4 @@ const books = [
   userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
 })
-  console.log(userBooks);
+//   console.log(userBooks);

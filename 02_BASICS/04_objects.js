@@ -6,7 +6,7 @@ tinderUser.name = "Sammy"
 tinderUser.id = "123abc"
 tinderUser.isLoggedIn = false
 
-// console.log(tinderUser);
+console.log(tinderUser);
 // console.log(Object.keys(tinderUser));
 // console.log(Object.values(tinderUser));
 // console.log(Object.entries(tinderUser)); // key value pair array
@@ -56,7 +56,7 @@ const users = [
     }
 ]
 users[1].email //accessing email of 2nd object
-// console.log(users[1].email);
+// console.log(users[1].email); // 
 
 
 //Destructuring Objects
@@ -66,12 +66,12 @@ const course  = {
     courseInstructor : "hitesh"
 }
 
-//course.courseInstructor 
+// course.courseInstructor 
 
 const {courseInstructor: instructor} = course
 // console.log(courseInstructor);
 console.log(instructor);
-
+// 
 //API(json format)
 // {
 //     "name": "hitesh",

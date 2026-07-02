@@ -1,4 +1,4 @@
-// for of -> map, set, array, string works only
+// for of -> map, set, array, string works only. (Object nhi krega)
 
 // ["", "", ""]
 // [{}, {}, {}]

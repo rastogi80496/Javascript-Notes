@@ -1,6 +1,6 @@
 // let score = "33"
-// let score = "33abc"
-let score = null
+let score = "33abc"
+// let score = null
 // let score = undefined
 // let  score =  true
 // let score = "Hitesh"
@@ -10,7 +10,7 @@ let score = null
 
 let valueInNumber = Number(score)
 // console.log(typeof valueInNumber);
-// console.log(valueInNumber);
+console.log(valueInNumber);
 
 // "33" => 33
 // "33abc" => NaN (Not a Number)

@@ -7,13 +7,14 @@
 
 
 
-// console.log("2" > 1);
-// console.log("02" > 1); 
+// console.log("2" > 1); //true as string is converted to number
+// console.log("02" > 1);  //true as string is converted to number
+// console.log("2" > "12"); //true as string is compared lexicographically meaning first character of both strings is compared and then second character and so on
 
 
 
 // console.log(null > 0); //false
-// console.log(null == 0);
+// console.log(null == 0); //false
 // console.log(null >= 0); //true
 
 /*
